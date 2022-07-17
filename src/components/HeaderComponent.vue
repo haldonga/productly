@@ -16,7 +16,9 @@
         </ul>
       </div>
       <div class="header_buttons">
-        <div class="header_buttons-signup"><button><p>Sign Up</p></button></div>
+        <div class="header_buttons-signup">
+          <ButtonComponent :buttonTitle = '$t("button.title1")'/>
+        </div>
       </div>
     </div>
   </div>
@@ -24,7 +26,11 @@
 
 <script>
 export default {
-  name: "HeaderProductly"
+  name: "HeaderComponent",
+  data:() => ({
+    buttonTitle: ''
+  })
+
 }
 </script>
 
