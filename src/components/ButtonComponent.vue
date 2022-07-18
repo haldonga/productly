@@ -1,6 +1,6 @@
 <template>
-  <div class="ButtonComponent">
-    <button>{{title}}</button>
+  <div class="Button">
+    <button>{{buttonTitle}}</button>
   </div>
 </template>
 
@@ -8,9 +8,8 @@
 export default {
   name: "ButtonComponent",
   props: {
-    title: {
-      type: String,
-      default: ''
+    buttonTitle: {
+      type: String
     }
   },
 }

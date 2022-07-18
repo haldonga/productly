@@ -16,9 +16,11 @@
         </ul>
       </div>
       <div class="header_buttons">
+        <div class="header_buttons-signin">
+          <ButtonComponent :buttonTitle = '$t("button.SignIn")'/>
+        </div>
         <div class="header_buttons-signup">
-          <ButtonComponent/>
-          <ButtonComponent :buttonTitle = '$t("button.title1")'/>
+          <ButtonComponent :buttonTitle = '$t("button.SignUp")'/>
         </div>
       </div>
     </div>
@@ -29,9 +31,11 @@
 import ButtonComponent from "./ButtonComponent";
 export default {
   name: "HeaderComponent",
-  components: ButtonComponent,
+  components: {
+    ButtonComponent
+  },
   data:() => ({
-    buttonTitle: ''
+    buttonTitle: '',
   })
 
 }
@@ -77,7 +81,7 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.header_buttons-signin button{
+.button button{
   margin: 15px 14px 17px 0;
   font-family: 'Poppins';
   font-style: normal;
@@ -97,7 +101,7 @@ export default {
   width: 55px;
   margin:11px 22px 11px 25px;
 }
-.header_buttons-signup button{
+.header_buttons-signup ButtonComponent{
   margin: 15px 145px 17px 0;
   font-family: 'Poppins';
   font-style: normal;
@@ -112,10 +116,9 @@ export default {
   height: 46px;
   width: 110px;
 }
-.header_buttons-signup p{
+.header_buttons-signup ButtonComponent{
   height: 24px;
   width: 62px;
   margin:11px 23px 11px 25px;
 }
-
 </style>

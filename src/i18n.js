@@ -1,10 +1,14 @@
-import Json from './languages/file.json'
 import {createI18n} from "vue-i18n";
 
 const i18n = createI18n({
     locale: 'en',
     messages: {
-        en: Json
+        en: {
+            button:{
+                SignIn: 'Sign In',
+                SignUp: 'Sign Up'
+            }
+        }
     }
 })
 
