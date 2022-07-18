@@ -17,6 +17,7 @@
       </div>
       <div class="header_buttons">
         <div class="header_buttons-signup">
+          <ButtonComponent/>
           <ButtonComponent :buttonTitle = '$t("button.title1")'/>
         </div>
       </div>
@@ -25,8 +26,10 @@
 </template>
 
 <script>
+import ButtonComponent from "./ButtonComponent";
 export default {
   name: "HeaderComponent",
+  components: ButtonComponent,
   data:() => ({
     buttonTitle: ''
   })

@@ -1,18 +1,9 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHashHistory } from "vue-router";
+import homeComponent from "../views/homeComponent.vue";
 
-Vue.use(VueRouter)
-
-const router = new VueRouter({
-    mode: 'history',
-    base: process.env.BASE_URL,
+export default  createRouter({
+    history: createWebHashHistory(),
     routes: [
-        {
-            path: '/',
-            name: 'index',
-            component: () => import('@/views/homeComponent')
-        }
+        { path: '/', component: homeComponent }
     ]
 })
-
-export default router
